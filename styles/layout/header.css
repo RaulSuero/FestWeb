@@ -1,0 +1,151 @@
+    /* HEADER */
+/* navbar */
+nav {
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    z-index: 10;
+    width: auto;
+}
+
+/* Logo */
+.logo img {
+    height: 80px;
+}
+
+/* boton burguer */
+.hamburger {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: transparent;
+	height: 30px;
+	width: 30px;
+	transform: translate3d(0, 0, 0);
+	transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+	z-index: 2;
+	cursor: pointer;
+	user-select: none
+}
+
+.hamburger.is-active {
+  background-color: none;
+}
+
+._layer {
+	background: white;
+	margin-bottom: 4px;
+	border-radius: 2px;
+	width: 28px;
+	height: 4px;
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+	transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+
+.hamburger:hover .-top {
+	transform: translateY(-100%);
+}
+
+.hamburger:hover .-bottom {
+	transform: translateY(100%);
+}
+
+/* animacion boton burguer */
+.hamburger.is-active .-top {
+	transform: translateY(200%) rotate(45deg) !important;
+}
+
+.hamburger.is-active .-mid {
+	opacity: 0;
+}
+
+.hamburger.is-active .-bottom {
+	transform: translateY(-200%) rotate(135deg) !important;
+}
+
+/* desplegable burguer */
+.menuppal {
+    background-color: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 87vh;
+    width: 30%;
+    padding: 20px 0;
+    z-index: 1;
+    text-align: center;
+    border-radius: 8px;
+    margin: 5px;
+    margin-top: 75px;
+
+    transform: translateX(150%);
+    opacity: 0;
+
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.menuppal.is_active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.menuppal ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menuppal ul a {
+    text-decoration: none;
+}
+
+.menuppal ul a li { 
+    list-style: none;
+	text-align: center;
+	font-family: Verdadna, Arial, Helvetica;
+	font-size: 1.5rem;
+	line-height: 3em;
+	height: 3em;
+    color: #369;
+	text-transform: none;
+	font-weight: bold;
+}
+
+.menuppal ul a li {
+    text-decoration: none;
+    color: white;
+}
+
+.menuppal ul a li:hover {
+    text-decoration: none;
+    color: #adadad;
+}
+
+/* unir boton y burguer */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Botón entradas */
+.button_entras_nav {
+    background-color: #ffd600;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+  
+.button_entras_nav:hover {
+    background-color: #ffca00;
+}
