@@ -9,12 +9,20 @@ footer {
     padding: 4rem;
 }
 
+.logo_footer {
+    width: 100%;
+    max-width: 80px; /* PROVISIONAL */
+    
+}
+
 .social_media {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    width: 400px;
 }
 
 .social_media div {
     background-color: white;
-    border-radius: 100px;
+    border-radius: 100%;
 }
