@@ -1,3 +1,25 @@
+:root {
+    /* Colores principales flamencos */
+    --rojo-flamenco:       #C0392B;
+    --negro-flamenco:      #1A1A1A;
+    --blanco-flamenco:     #FFFFFF;
+  
+    /* Neutros de apoyo */
+    --gris-claro:          #F5F5F5;
+    --gris-medio:          #CCCCCC;
+    --gris-oscuro:         #333333;
+  
+    /* Tonos cálidos complementarios */
+    --beige-flamenco:      #F0E6D2;
+    --beige-oscuro:        #d5cab4;
+    --amarillo-acento:     #F1C40F;
+  
+    /* Sombras y transparencias */
+    --sombra-leve:         rgba(0, 0, 0, 0.1);
+    --sombra-intensa:      rgba(0, 0, 0, 0.3);
+}
+  
+
 body {
     height: 100%;
     height: 100%;
@@ -34,10 +56,16 @@ body {
     object-fit: cover;
 }
 
+.hero .content {
+    margin: 0;
+    max-width: 80%;
+
+}
+
 .hero p {
     font-weight: bold;
     font-size: 150px;
-    color: #fffce6;
+    color: var(--beige-flamenco);
 }
 
 /* BODY */
@@ -46,6 +74,7 @@ body {
     grid-template-columns: 0.7fr 6.7fr 0.7fr;
 }
 
+/* barras laterales */
 .body_bgimg {
     background-image: url(/media/bg_index.png);
     background-repeat: no-repeat;
@@ -53,7 +82,58 @@ body {
     background-position: center center;
 }
 
+/* contenido body */
 .body_content {
-    background-color: #fffce6;
+    background-color: var(--beige-flamenco);
     height: 200vh;
+    text-align: center;
+    padding: 4rem 4rem;
+}
+
+/* titulo artistas destacados */
+#artistas_destacados {
+    background-color: var(--amarillo-acento);
+    box-shadow: 0 1px 3px var(--sombra-leve);
+    display: inline-block;
+    padding: 16px 32px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+  
+#artistas_destacados p {
+    margin: 0;
+    color: #fff;
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+/* pansequito */
+.pansequito {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+  
+.pansequito img {
+    width: 300px;
+    height: 300px;
+    object-fit:cover;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px var(--sombra-intensa);
+}
+  
+#pansequito_content {
+    flex: 1; /* ocupa el resto del espacio */
+    background-color: var(--beige-oscuro);
+    box-shadow: 0 1px 3px var(--sombra-leve);
+    border-radius: 6px;
+    padding: 6px 32px;
+    text-align: justify;
+}
+
+#pansequito_content p {
+    font-size: 1.5em;
 }
